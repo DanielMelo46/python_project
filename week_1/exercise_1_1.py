@@ -7,6 +7,27 @@ def area_circle(radius : float = 0.0) -> float:
     """Calculate the area of a circle using an approximate valie of pi."""
     return 3.14 * radius ** 2
 
+# Example 2
+def print_is_odd_or_even(number : int = 0) -> None:
+    """Print if a number is odd or even. This function is used by list_odd_or_even_check."""
+    if number % 2 == 0:
+        print(f"{number} is even.")
+    else:
+        print(f"{number} is odd.")
+
+def list_odd_or_even_check(numbers : list[int] = []) -> None:
+    """Check if numbers in a list are odd or even."""
+    for number in numbers:
+        print_is_odd_or_even(number)
+
+# Example 3
+
+def calculate_discounted_price(price : float = 0.0, discount : float = 0.0) -> float:
+    """Calculate the price after a discount."""
+    if discount < 0 or discount > 1:
+        print("Error: Discount must be between 0 and 1.")
+        return price
+    return price * (1 - discount )
 # Calculating area of rectangles
 length1 = 10
 width1 = 5
