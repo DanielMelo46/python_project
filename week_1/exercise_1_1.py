@@ -1,3 +1,12 @@
+# Example 1
+def area_rectangle(length : float = 0.0, width : float = 0.0) -> float:
+    """Calculate the area of a rectangle."""
+    return length * width
+
+def area_circle(radius : float = 0.0) -> float:
+    """Calculate the area of a circle using an approximate valie of pi."""
+    return 3.14 * radius ** 2
+
 # Calculating area of rectangles
 length1 = 10
 width1 = 5
