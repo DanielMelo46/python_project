@@ -9,4 +9,8 @@ countries = {
     "Germany": 83,
     "Japan": 126
 }
-
+# Write your loop here
+for c , p in countries.items():# Iterating over the items, which works as a pair of iterators for key and value
+    print(f"Country: {c}, population: {p} million(s).")
+    if p > 100:
+        print(f"{c} is heavily populated.")
