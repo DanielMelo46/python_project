@@ -13,10 +13,8 @@ def transform_to_dict(text : str = "") -> dict:
 # input string
 data = " Name: John Doe ; Age : 25;  CITY: New York ; Occupation: Software Engineer "
 
-# expected output
-{
-  'name': 'John Doe',
-  'age': '25',
-  'city': 'New York',
-  'occupation': 'Software Engineer'
-}
+print('Question 1')
+data = " Name: John Doe ; Age : 25;  CITY: New York ; Occupation: Software Engineer "
+print(f'Before: {data}')
+transformed_dict = transform_to_dict(data)
+print(f'After: {transformed_dict}')
