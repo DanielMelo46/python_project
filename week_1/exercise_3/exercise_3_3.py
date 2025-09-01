@@ -7,3 +7,7 @@ sentences to ensure correct results."""
 sentence = 'Python is fun and powerful'
 
 # Check for words 'fun' and 'boring'
+if 'fun' in sentence:
+    print("The word 'fun' is in the sentence.")
+if 'boring' in sentence:
+    print("The word 'boring' is in the sentence.")
