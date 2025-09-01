@@ -12,27 +12,11 @@ def list_odd_or_even_check(numbers : list[int] = []) -> None:
         print_is_odd_or_even(number)
 
 numbers1 = [10, 15, 22, 29, 30]
-list_odd_or_even_check(numbers1)
-"""# Check for odd or even numbers in list 1
-
-for num in numbers1:
-    if num % 2 == 0:
-        print(f"{num} is even.")
-    else:
-        print(f"{num} is odd.")
-
-# Check for odd or even numbers in list 2
 numbers2 = [1, 4, 7, 9, 12]
-for num in numbers2:
-    if num % 2 == 0:
-        print(f"{num} is even.")
-    else:
-        print(f"{num} is odd.")
-
-# Check for odd or even numbers in list 3
 numbers3 = [100, 150, 200]
-for num in numbers3:
-    if num % 2 == 0:
-        print(f"{num} is even.")
-    else:
-        print(f"{num} is odd.")"""
+print(f"First list check ({numbers1}):")
+list_odd_or_even_check(numbers1)
+print(f"Second list check ({numbers2}):")
+list_odd_or_even_check(numbers2)
+print(f"Third list check ({numbers3}):")
+list_odd_or_even_check(numbers3)
