@@ -6,9 +6,15 @@ def print_is_odd_or_even(number : int = 0) -> None:
     else:
         print(f"{number} is odd.")
 
-print_is_odd_or_even(10)
-"""# Check for odd or even numbers in list 1
+def list_odd_or_even_check(numbers : list[int] = []) -> None:
+    """Check if numbers in a list are odd or even using print_is_odd_or_even."""
+    for number in numbers:
+        print_is_odd_or_even(number)
+
 numbers1 = [10, 15, 22, 29, 30]
+list_odd_or_even_check(numbers1)
+"""# Check for odd or even numbers in list 1
+
 for num in numbers1:
     if num % 2 == 0:
         print(f"{num} is even.")
