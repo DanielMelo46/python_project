@@ -1,23 +1,25 @@
-def transform_to_dict_6(text : str = "") -> dict:
-    """Transform a string of several key-value pairs (several char) separated by ; into a list of dictionaries."""
+def transform_to_dict_6(text : str = "") -> list:
+    """Transform a string of several key-value pairs (several char) separated by ; into a list of dictionaries with keys in expected order."""
     result = []
     expected_keys = ['transaction_id', 'customer_name', 'item', 'price', 'discount']
     chars = [':', '=', '-'] # List of possible characters that can separate key and value
     persons = text.split(';')
     for person in persons:
-        person_dict = {} # This dict will save each person's attributes
+        temp_dict = {}
         pairs = person.split(',')
-        for pair in pairs :
+        for pair in pairs:
             for char in chars:
                 if char in pair:
-                    k , v = pair.split(char,1)
-                    person_dict[k.strip()] = v.strip()
-                    break # Exit the loop once a match is found
+                    k, v = pair.split(char, 1)
+                    temp_dict[k.strip()] = v.strip()
+                    break
+        # Build ordered dict with expected keys first
+        person_dict = {key: temp_dict.get(key, None) for key in expected_keys}
+        # Add any extra keys that were not in expected_keys
+        for k, v in temp_dict.items():
+            if k not in person_dict:
+                person_dict[k] = v
         result.append(person_dict)
-        # Ensure all expected keys are present
-        for key in expected_keys:
-            if key not in person_dict:
-                person_dict[key] = None
     return result
 
 # messy data string
