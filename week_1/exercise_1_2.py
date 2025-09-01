@@ -1,4 +1,13 @@
-# Check for odd or even numbers in list 1
+# Example 2
+def print_is_odd_or_even(number : int = 0) -> None:
+    """Print if a number is odd or even. This function is used by list_odd_or_even_check."""
+    if number % 2 == 0:
+        print(f"{number} is even.")
+    else:
+        print(f"{number} is odd.")
+
+print_is_odd_or_even(10)
+"""# Check for odd or even numbers in list 1
 numbers1 = [10, 15, 22, 29, 30]
 for num in numbers1:
     if num % 2 == 0:
@@ -20,4 +29,4 @@ for num in numbers3:
     if num % 2 == 0:
         print(f"{num} is even.")
     else:
-        print(f"{num} is odd.")
+        print(f"{num} is odd.")"""
