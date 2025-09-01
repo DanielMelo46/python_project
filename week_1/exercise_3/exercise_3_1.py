@@ -4,4 +4,9 @@
 # Your solution for Question 1
 x = 15
 # Write your conditions here
-
+if x > 10:
+    print(f"{x} is greater than 10.")
+elif x == 10:
+    print(f"{x} is equal to 10.")
+else:
+    print(f"{x} is less than 10.")
