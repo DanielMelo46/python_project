@@ -15,11 +15,9 @@ def transform_to_dict_2(text : str = "") -> dict:
     return result
 
 # input
-data = "Name: Alice, Age: 30, City: Los Angeles | Name: Bob, Age: 25, City: Chicago | Name: Charlie , Age: 35, City: New York"
+data2 = "Name: Alice, Age: 30, City: Los Angeles | Name: Bob, Age: 25, City: Chicago | Name: Charlie , Age: 35, City: New York"
 
-# expected output
-[
-    {'name': 'Alice', 'age': '30', 'city': 'Los Angeles'},
-    {'name': 'Bob', 'age': '25', 'city': 'Chicago'},
-    {'name': 'Charlie', 'age': '35', 'city': 'New York'}
-]
+print('Question 2')
+data2 = "Name: Alice, Age: 30, City: Los Angeles | Name: Bob, Age: 25, City: Chicago | Name: Charlie , Age: 35, City: New York"
+print(f'Before: {data2}')
+print(f'After: {transform_to_dict_2(data2)}') # List of dictionaries
