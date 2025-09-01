@@ -7,16 +7,15 @@ def transform_to_dict_5(text : str = "") -> dict:
         pairs = entry.split(',')
         for pair in pairs :
             k , v = pair.split(':')
-            person_dict[k.strip()] = None if v.strip == 'N/A' else v.strip()
+            v_clean = v.strip()
+            person_dict[k.strip()] = None if v_clean == 'N/A' else v_clean
         result.append(person_dict)
     return result
 
 # messy data string
-data = "device_id: 001, temp: 72, humidity: 45 | device_id: 002, temp: N/A, humidity: 50 | device_id: 003, temp: 68, humidity: N/A"
+data5 = "device_id: 001, temp: 72, humidity: 45 | device_id: 002, temp: N/A, humidity: 50 | device_id: 003, temp: 68, humidity: N/A"
 
-# expected output
-[
-    {'device_id': '001', 'temp': 72, 'humidity': 45},
-    {'device_id': '002', 'temp': None, 'humidity': 50},
-    {'device_id': '003', 'temp': 68, 'humidity': None}
-]
+print('Question 5')
+data5 = "device_id: 001, temp: 72, humidity: 45 | device_id: 002, temp: N/A, humidity: 50 | device_id: 003, temp: 68, humidity: N/A"
+print(f'Before: {data5}')
+print(f'After: {transform_to_dict_5(data5)}')
