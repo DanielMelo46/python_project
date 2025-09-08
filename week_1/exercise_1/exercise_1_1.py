@@ -30,6 +30,3 @@ for circle in circles :
     area = area_circle(circle['radius'])
     #print the output
     print(f'Area of {circle['name']} : {area}')
-    
-# print(f"Area of circle 1: {area_circle(circle1)}")
-# print(f"Area of circle 2: {area_circle(circle2)}")
