@@ -9,12 +9,27 @@ def area_circle(radius : float = 0.0) -> float:
 
 # Calculating area of rectangles
 # Note the use of dictionaries to store rectangle properties
-rectangle1 = {'length': 10, 'width': 5}
-rectangle2 = {'length': 20, 'width': 10}
-circle1 = 5.0 # radius
-circle2 = 10.0 # radius
+rectangles = [
+    {'name' : 'R1','length': 10, 'width': 5},
+    {'name' : 'R2','length': 20, 'width': 10}
+]
 
-print(f"Area of rectangle 1: {area_rectangle(rectangle1['length'], rectangle1['width'])}")
-print(f"Area of rectangle 2: {area_rectangle(rectangle2['length'], rectangle2['width'])}")
-print(f"Area of circle 1: {area_circle(circle1)}")
-print(f"Area of circle 2: {area_circle(circle2)}")
+for rectangle in rectangles:
+    # calculate the area
+    area = area_rectangle(rectangle["length"], rectangle["width"])
+    # print the output
+    print(f"Area of {rectangle["name"]} rectangle: {area}")
+
+circles = [
+    {'name' : 'C1', 'radius' : 4},
+    {'name' : 'C2', 'radius' : 6}
+]
+
+for circle in circles :
+    #Calculation
+    area = area_circle(circle['radius'])
+    #print the output
+    print(f'Area of {circle['name']} : {area}')
+    
+# print(f"Area of circle 1: {area_circle(circle1)}")
+# print(f"Area of circle 2: {area_circle(circle2)}")
